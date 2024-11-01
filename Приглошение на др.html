@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение на день рождения Александра</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .invitation-text {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .details {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .formGroup {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+            button:hover {
+                background-color: #49cb1e;
+            }
+        #link { 
+            display: none; 
+            margin-top: 20px; 
+            text-align: center; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Приглашение на день рождения! 🎉</h1>
+
+        <div class="invitation-text">
+            <p>Дорогие друзья!</p>
+            <p>Приглашаю вас отпраздновать мое 18-летие!</p>
+            <p>Будет весело, вкусно и незабываемо!</p>
+        </div>
+
+        <div class="details">
+            <h2>Детали мероприятия:</h2>
+            <p>🎂 Виновник торжества: Александр</p>
+            <p>📅 Дата: С 10 на 11 Января</p>
+            <p>⏰ Время: Заезд: Выезд:</p>
+            <p>📍 Место: [укажите адрес]</p>
+            <p>🎮 В программе: виски, шашлык, музыка, танцы и много сюрпризов!</p>
+        </div>
+
+        <h2>Регистрация</h2>
+        <form id="Form">
+                        <div class="formGroup">
+                <label for="attendance">Присутствие:</label>
+                <select id="attendance" name="attendance" required>
+                    <option value="">Выберите ответ</option>
+                    <option value="yes">Да, приду</option>
+                    <option value="no">К сожалению, не смогу</option>
+                </select>
+            </div>            
+            <button type="submit">Отправить ответ</button>
+            <script type="text/javascript">
+                const form = document.getElementById("Form");
+                const valueInner = document.getElementById("attendance");
+                
+                form.addEventListener('submit', (e)=>
+                {
+                    if (valueInner.value == "yes") {
+                        location = 'https://t.me/+TwOHNBFbD6RiOTYy';
+                        alert("УРА!!!");
+                    }
+                    else
+                    {
+                        alert("Ну и хуй с тобой!")
+                    }
+                })
+                
+            </script>
+        </form>
